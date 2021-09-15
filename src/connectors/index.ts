@@ -13,6 +13,7 @@ const FORMATIC_KEY = process.env.REACT_APP_FORTMATIC_KEY
 const PORTIS_ID = process.env.REACT_APP_PORTIS_ID
 
 export const NETWORK_CHAIN_ID: number = parseInt(process.env.REACT_APP_CHAIN_ID ?? '56')
+export const NETWORK_RPC_ENDPOINT: string = process.env.REACT_APP_NETWORK_URL ?? "https://polygon-rpc.com/";
 
 if (typeof NETWORK_URL === 'undefined') {
   throw new Error(`REACT_APP_NETWORK_URL must be a defined environment variable`)
@@ -28,16 +29,16 @@ export function getNetworkLibrary(): Web3Provider {
 }
 
 export const injected = new InjectedConnector({
-  supportedChainIds: [56]
+  supportedChainIds: [NETWORK_CHAIN_ID]
 })
 
 export const bsc = new BscConnector({
-  supportedChainIds: [56]
+  supportedChainIds: [NETWORK_CHAIN_ID]
 })
 
 export const walletconnect = new WalletConnectConnector({
-  rpc: { 56: 'https://bsc-dataseed.binance.org/' },
-  bridge: 'https://bsc-dataseed.binance.org/',
+  rpc: { [NETWORK_CHAIN_ID]: NETWORK_RPC_ENDPOINT },
+  bridge: NETWORK_RPC_ENDPOINT,
   qrcode: true,
   pollingInterval: 5000
 })

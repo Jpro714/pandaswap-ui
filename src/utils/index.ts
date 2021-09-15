@@ -23,13 +23,13 @@ const ETHERSCAN_PREFIXES: { [chainId in ChainId]: string } = {
   4: 'rinkeby.',
   5: 'goerli.',
   42: 'kovan.',
-  56: ''
+  137: 'polygon'
 }
 
 export function getEtherscanLink(chainId: ChainId, data: string, type: 'transaction' | 'token' | 'address'): string {
   let prefix
-  if (chainId === 56) {
-    prefix = 'https://bscscan.com/'
+  if (chainId === 137) {
+    prefix = 'https://polygonscan.com/'
   } else {
     prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}etherscan.io`
   }

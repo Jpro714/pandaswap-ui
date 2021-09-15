@@ -14504,9 +14504,9 @@ unique-slug@^2.0.0:
   dependencies:
     imurmurhash "^0.1.4"
 
-"uniswap-bsc-sdk@https://github.com/thebaoman/bsc-sdk#28864ca816bb8ec767766ff73d8befff7ae0ee04":
+"uniswap-bsc-sdk@https://github.com/Jpro714/bsc-sdk#6c990bb2a0fce27c3449b6308112a07eee51b8aa":
   version "1.0.3"
-  resolved "https://github.com/thebaoman/bsc-sdk#28864ca816bb8ec767766ff73d8befff7ae0ee04"
+  resolved "https://github.com/Jpro714/bsc-sdk#6c990bb2a0fce27c3449b6308112a07eee51b8aa"
   dependencies:
     "@uniswap/v2-core" "^1.0.0"
     big.js "^5.2.2"
