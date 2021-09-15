@@ -1,33 +1,32 @@
 import { useMemo } from 'react'
 import { ChainId, Token } from 'uniswap-bsc-sdk'
-
 export const contractAddresses = {
   bao: {
-    56: '0x47DcC83a14aD53Ed1f13d3CaE8AA4115f07557C0',
+    137: '0x47DcC83a14aD53Ed1f13d3CaE8AA4115f07557C0',
   },
   bamboo: {
-    56: '0xEF88e0d265dDC8f5E725a4fDa1871F9FE21B11E2',
+    137: '0xEF88e0d265dDC8f5E725a4fDa1871F9FE21B11E2',
   },
   rhinoStaking: {
-    56: '0x745c8E1c0315162C33408454b48E53C9F178eB68',
+    137: '0x745c8E1c0315162C33408454b48E53C9F178eB68',
   },
   rhino: {
-    56: '0xD2ECa3cff5F09Cfc9C425167d12F0a005Fc97c8c',
+    137: '0xD2ECa3cff5F09Cfc9C425167d12F0a005Fc97c8c',
   },
   masterChef: {
-    56: '0x9942cb4c6180820E6211183ab29831641F58577A',
+    137: '0x9942cb4c6180820E6211183ab29831641F58577A',
   },
   wbnb: {
-    56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+    137: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
   },
   wbnbPrice: {
-    56: '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
+    137: '0x0567F2323251f0Aab15c8dFb1967E4e8A7D42aeE',
   },
   bambooMaker: {
-    56: '0xe1a2CD535C4e7d9C2C187e529f9f491cceA41e07',
+    137: '0xe1a2CD535C4e7d9C2C187e529f9f491cceA41e07',
   },
   pndaPrice: {
-    56: '',
+    137: '',
   },
 }
 
@@ -233,10 +232,10 @@ export enum PoolType {
 export interface SupportedPool {
   pid: number
   lpAddresses: {
-    56: string
+    137: string
   }
   tokenAddresses: {
-    56: [TokenDescriptor, TokenDescriptor]
+    137: [TokenDescriptor, TokenDescriptor]
   }
   tokenDecimals: number
   name: string
@@ -251,10 +250,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 3,
     lpAddresses: {
-      56: '0x97f6665ac6b2d7C3d5a2aD11d7a779787F617ce0',
+      137: '0x97f6665ac6b2d7C3d5a2aD11d7a779787F617ce0',
     },
     tokenAddresses: {
-      56: [tokenMap.PNDA, tokenMap.BNB],
+      137: [tokenMap.PNDA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Panda Party',
@@ -266,10 +265,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 0,
     lpAddresses: {
-      56: '0x059fC92273CdF0809ba45f199E0a12d8899Ab402',
+      137: '0x059fC92273CdF0809ba45f199E0a12d8899Ab402',
     },
     tokenAddresses: {
-      56: [tokenMap.PNDA, tokenMap.ETH],
+      137: [tokenMap.PNDA, tokenMap.ETH],
     },
     tokenDecimals: 18,
     name: 'PNDA-ETH',
@@ -281,10 +280,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 1,
     lpAddresses: {
-      56: '0xbe01056Bc0e29eb28c9c357c227e320Afd12776C',
+      137: '0xbe01056Bc0e29eb28c9c357c227e320Afd12776C',
     },
     tokenAddresses: {
-      56: [tokenMap.PNDA, tokenMap.USDC],
+      137: [tokenMap.PNDA, tokenMap.USDC],
     },
     tokenDecimals: 18,
     name: 'PNDA-USDC',
@@ -296,10 +295,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 2,
     lpAddresses: {
-      56: '0x0810E97C9FA4cCCebe559509edf74b650B432dcE',
+      137: '0x0810E97C9FA4cCCebe559509edf74b650B432dcE',
     },
     tokenAddresses: {
-      56: [tokenMap.PNDA, tokenMap.BUSD],
+      137: [tokenMap.PNDA, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'PNDA-BUSD',
@@ -311,10 +310,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 4,
     lpAddresses: {
-      56: '0x7C8BA77476A3E713b27E7c1450227A0fF3411616',
+      137: '0x7C8BA77476A3E713b27E7c1450227A0fF3411616',
     },
     tokenAddresses: {
-      56: [tokenMap.DAI, tokenMap.PNDA],
+      137: [tokenMap.DAI, tokenMap.PNDA],
     },
     tokenDecimals: 18,
     name: 'PNDA-DAI',
@@ -326,10 +325,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 92,
     lpAddresses: {
-      56: '0x999fd87aA406adB81809bab15681f655d8a049FF',
+      137: '0x999fd87aA406adB81809bab15681f655d8a049FF',
     },
     tokenAddresses: {
-      56: [tokenMap.RHINO, tokenMap.BNB],
+      137: [tokenMap.RHINO, tokenMap.BNB],
     },
     tokenDecimals: 9,
     name: 'Rhino Remoulade',
@@ -341,10 +340,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 93,
     lpAddresses: {
-      56: '0x92dc12e0eb47b287b4d91976d4eb968f61822531',
+      137: '0x92dc12e0eb47b287b4d91976d4eb968f61822531',
     },
     tokenAddresses: {
-      56: [tokenMap.RHINO, tokenMap.BNB],
+      137: [tokenMap.RHINO, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Rhino Rumbles',
@@ -357,10 +356,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 91,
     lpAddresses: {
-      56: '0xa300526D664a0227c2fdFC0b423750E371Ab2ebD',
+      137: '0xa300526D664a0227c2fdFC0b423750E371Ab2ebD',
     },
     tokenAddresses: {
-      56: [tokenMap.BAMBOO, tokenMap.BNB],
+      137: [tokenMap.BAMBOO, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Bamboo Shake',
@@ -372,10 +371,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 5,
     lpAddresses: {
-      56: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
+      137: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
     },
     tokenAddresses: {
-      56: [tokenMap.BNB, tokenMap.BNB],
+      137: [tokenMap.BNB, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'WBNB',
@@ -387,10 +386,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 6,
     lpAddresses: {
-      56: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
+      137: '0x0e09fabb73bd3ade0a17ecc321fd13a19e81ce82',
     },
     tokenAddresses: {
-      56: [tokenMap.CAKE, tokenMap.CAKE],
+      137: [tokenMap.CAKE, tokenMap.CAKE],
     },
     tokenDecimals: 18,
     name: 'CAKE',
@@ -402,10 +401,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 24,
     lpAddresses: {
-      56: '0x640E2c0EcCd822F79951b6E63A44786c475E75b4',
+      137: '0x640E2c0EcCd822F79951b6E63A44786c475E75b4',
     },
     tokenAddresses: {
-      56: [tokenMap.ETH, tokenMap.BNB],
+      137: [tokenMap.ETH, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'ETH-BNB',
@@ -417,10 +416,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 8,
     lpAddresses: {
-      56: '0x9c33Ef062513F68672c712cc28673e6861c3B88a',
+      137: '0x9c33Ef062513F68672c712cc28673e6861c3B88a',
     },
     tokenAddresses: {
-      56: [tokenMap.ADA, tokenMap.BNB],
+      137: [tokenMap.ADA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Cardano Caviar',
@@ -432,10 +431,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 9,
     lpAddresses: {
-      56: '0x08857e65ca9771cc7E858F8feDC8a3e3C9b9ecE6',
+      137: '0x08857e65ca9771cc7E858F8feDC8a3e3C9b9ecE6',
     },
     tokenAddresses: {
-      56: [tokenMap.DOT, tokenMap.BNB],
+      137: [tokenMap.DOT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Polka Poke',
@@ -447,10 +446,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 10,
     lpAddresses: {
-      56: '0x71252b4704b99fc37c141b2042eD25ffE0005b7D',
+      137: '0x71252b4704b99fc37c141b2042eD25ffE0005b7D',
     },
     tokenAddresses: {
-      56: [tokenMap.XRP, tokenMap.BNB],
+      137: [tokenMap.XRP, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Ripple Rice Bowl',
@@ -462,10 +461,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 11,
     lpAddresses: {
-      56: '0x4524E2b380e590DA205eB923F69865F5f7d54E48',
+      137: '0x4524E2b380e590DA205eB923F69865F5f7d54E48',
     },
     tokenAddresses: {
-      56: [tokenMap.LTC, tokenMap.BNB],
+      137: [tokenMap.LTC, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Lite(coin) Snacker',
@@ -477,10 +476,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 12,
     lpAddresses: {
-      56: '0x854ea3E74eED7C6cE1372dbF78d0aC1fE815Ac20',
+      137: '0x854ea3E74eED7C6cE1372dbF78d0aC1fE815Ac20',
     },
     tokenAddresses: {
-      56: [tokenMap.LINK, tokenMap.BNB],
+      137: [tokenMap.LINK, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Link Lunch',
@@ -492,10 +491,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 13,
     lpAddresses: {
-      56: '0xAcAeb6859ed08210E05df247e1DC3a2ED4D5FBCB',
+      137: '0xAcAeb6859ed08210E05df247e1DC3a2ED4D5FBCB',
     },
     tokenAddresses: {
-      56: [tokenMap.BUSD, tokenMap.BNB],
+      137: [tokenMap.BUSD, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'BUSD BLT',
@@ -507,10 +506,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 14,
     lpAddresses: {
-      56: '0xfF1E8a21a87b115d73f8Fc9eC9dE29B5276F7E6c',
+      137: '0xfF1E8a21a87b115d73f8Fc9eC9dE29B5276F7E6c',
     },
     tokenAddresses: {
-      56: [tokenMap.DOGE, tokenMap.BNB],
+      137: [tokenMap.DOGE, tokenMap.BNB],
     },
     tokenDecimals: 8,
     name: 'Dogenuts',
@@ -522,10 +521,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 15,
     lpAddresses: {
-      56: '0xA9adA7E53618eB903d6d1d5b94F58F813A712F50',
+      137: '0xA9adA7E53618eB903d6d1d5b94F58F813A712F50',
     },
     tokenAddresses: {
-      56: [tokenMap.UNI, tokenMap.BNB],
+      137: [tokenMap.UNI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Uni Unagi',
@@ -537,10 +536,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 16,
     lpAddresses: {
-      56: '0x6E410AC35e80B64106f0FeE7De4a1E652a9F5EB4',
+      137: '0x6E410AC35e80B64106f0FeE7De4a1E652a9F5EB4',
     },
     tokenAddresses: {
-      56: [tokenMap.EOS, tokenMap.BNB],
+      137: [tokenMap.EOS, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'EOS Egg Rolls',
@@ -552,10 +551,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 17,
     lpAddresses: {
-      56: '0x37550AAC6aB58F3E2Ddb7cD9b88E9A46411a5E4A',
+      137: '0x37550AAC6aB58F3E2Ddb7cD9b88E9A46411a5E4A',
     },
     tokenAddresses: {
-      56: [tokenMap.ATOM, tokenMap.BNB],
+      137: [tokenMap.ATOM, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Cosmos Custard',
@@ -567,10 +566,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 18,
     lpAddresses: {
-      56: '0x3C439733cb83e7894c9aD7a98aF57f106Ab0cEF8',
+      137: '0x3C439733cb83e7894c9aD7a98aF57f106Ab0cEF8',
     },
     tokenAddresses: {
-      56: [tokenMap.XTZ, tokenMap.BNB],
+      137: [tokenMap.XTZ, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Tezos Tempura',
@@ -582,10 +581,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 19,
     lpAddresses: {
-      56: '0x2D79CEE2Be6E918cf955A9b242017814D5522719',
+      137: '0x2D79CEE2Be6E918cf955A9b242017814D5522719',
     },
     tokenAddresses: {
-      56: [tokenMap.SNX, tokenMap.BNB],
+      137: [tokenMap.SNX, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Synthetix Snacks',
@@ -597,10 +596,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 20,
     lpAddresses: {
-      56: '0xe79f07C4EB5A76b1ad185A373f59C92CDA3A2880',
+      137: '0xe79f07C4EB5A76b1ad185A373f59C92CDA3A2880',
     },
     tokenAddresses: {
-      56: [tokenMap.MKR, tokenMap.BNB],
+      137: [tokenMap.MKR, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Maker Mooncake',
@@ -612,10 +611,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 21,
     lpAddresses: {
-      56: '0xa5aCC0095f4bB60B9ED0881bdf0Ef0DEf83dc73A',
+      137: '0xa5aCC0095f4bB60B9ED0881bdf0Ef0DEf83dc73A',
     },
     tokenAddresses: {
-      56: [tokenMap.COMP, tokenMap.BNB],
+      137: [tokenMap.COMP, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Compound Congee',
@@ -627,10 +626,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 22,
     lpAddresses: {
-      56: '0x6bf3E3eDb0e81888F4F9641Aef25abA815Ef593a',
+      137: '0x6bf3E3eDb0e81888F4F9641Aef25abA815Ef593a',
     },
     tokenAddresses: {
-      56: [tokenMap.DAI, tokenMap.BNB],
+      137: [tokenMap.DAI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Dai Dan Tat',
@@ -642,10 +641,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 23,
     lpAddresses: {
-      56: '0xE17642C43da3fA445C441680194331Be984bC714',
+      137: '0xE17642C43da3fA445C441680194331Be984bC714',
     },
     tokenAddresses: {
-      56: [tokenMap.YFI, tokenMap.BNB],
+      137: [tokenMap.YFI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'YFI Youtiao',
@@ -657,10 +656,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 7,
     lpAddresses: {
-      56: '0x835fAAC7fDdcc18FFA5D31B57Fa4F573cB4B3862',
+      137: '0x835fAAC7fDdcc18FFA5D31B57Fa4F573cB4B3862',
     },
     tokenAddresses: {
-      56: [tokenMap.CAKE, tokenMap.BNB],
+      137: [tokenMap.CAKE, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Pancakes and Syrup',
@@ -672,10 +671,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 25,
     lpAddresses: {
-      56: '0x83a1Bd9c6Ac29C7CE15331Ca6D7A38b0410Ab549',
+      137: '0x83a1Bd9c6Ac29C7CE15331Ca6D7A38b0410Ab549',
     },
     tokenAddresses: {
-      56: [tokenMap.NEAR, tokenMap.BNB],
+      137: [tokenMap.NEAR, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Near Nuggets',
@@ -687,10 +686,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 26,
     lpAddresses: {
-      56: '0xCaAee34377a468504e92614b6e69Bd5269EBAaa9',
+      137: '0xCaAee34377a468504e92614b6e69Bd5269EBAaa9',
     },
     tokenAddresses: {
-      56: [tokenMap.ONT, tokenMap.BNB],
+      137: [tokenMap.ONT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Ontology Orange Chicken',
@@ -702,10 +701,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 27,
     lpAddresses: {
-      56: '0x0774f886B3E15d11dDDA745C7dcDe125128e34E1',
+      137: '0x0774f886B3E15d11dDDA745C7dcDe125128e34E1',
     },
     tokenAddresses: {
-      56: [tokenMap.BAT, tokenMap.BNB],
+      137: [tokenMap.BAT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Brave Braised Pork',
@@ -717,10 +716,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 28,
     lpAddresses: {
-      56: '0x9040248eDBD5bfd105B287658536AD2b87dD86D0',
+      137: '0x9040248eDBD5bfd105B287658536AD2b87dD86D0',
     },
     tokenAddresses: {
-      56: [tokenMap.VAI, tokenMap.BNB],
+      137: [tokenMap.VAI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Vai Pie',
@@ -732,10 +731,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 29,
     lpAddresses: {
-      56: '0x60816ccec71161d69ee883f2be4522622d4a1cc9',
+      137: '0x60816ccec71161d69ee883f2be4522622d4a1cc9',
     },
     tokenAddresses: {
-      56: [tokenMap.PAX, tokenMap.BNB],
+      137: [tokenMap.PAX, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Paxos Pad Thai',
@@ -747,10 +746,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 30,
     lpAddresses: {
-      56: '0x7E5c6207A3eC0613227ecc00537Afd5607f74a37',
+      137: '0x7E5c6207A3eC0613227ecc00537Afd5607f74a37',
     },
     tokenAddresses: {
-      56: [tokenMap.XVS, tokenMap.BNB],
+      137: [tokenMap.XVS, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Venus Venison',
@@ -762,10 +761,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 31,
     lpAddresses: {
-      56: '0xB793e714d66dF64bc86f19A9AA2332f4C064A929',
+      137: '0xB793e714d66dF64bc86f19A9AA2332f4C064A929',
     },
     tokenAddresses: {
-      56: [tokenMap.BTCB, tokenMap.BNB],
+      137: [tokenMap.BTCB, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'BTCB Bubble Tea',
@@ -777,10 +776,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 32,
     lpAddresses: {
-      56: '0xcee10aE4a3fFdbf428e848CeFA37A9aCdF6388B8',
+      137: '0xcee10aE4a3fFdbf428e848CeFA37A9aCdF6388B8',
     },
     tokenAddresses: {
-      56: [tokenMap.UST, tokenMap.BUSD],
+      137: [tokenMap.UST, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'UST Roast Chicken',
@@ -792,10 +791,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 33,
     lpAddresses: {
-      56: '0xc2bf2711e5c2C724CC00F6Adb38f3F757653f468',
+      137: '0xc2bf2711e5c2C724CC00F6Adb38f3F757653f468',
     },
     tokenAddresses: {
-      56: [tokenMap.UST, tokenMap.BNB],
+      137: [tokenMap.UST, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'UST Tofu',
@@ -807,10 +806,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 34,
     lpAddresses: {
-      56: '0x967432434B2869a87e5be8393039f356514caE3a',
+      137: '0x967432434B2869a87e5be8393039f356514caE3a',
     },
     tokenAddresses: {
-      56: [tokenMap.BAND, tokenMap.BNB],
+      137: [tokenMap.BAND, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Band Bird Nest Soup',
@@ -822,10 +821,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 35,
     lpAddresses: {
-      56: '0x4669371979FE79F83c276B2e9287A73aF00c9b26',
+      137: '0x4669371979FE79F83c276B2e9287A73aF00c9b26',
     },
     tokenAddresses: {
-      56: [tokenMap.SFP, tokenMap.BNB],
+      137: [tokenMap.SFP, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'SafePal Stew',
@@ -837,10 +836,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 36,
     lpAddresses: {
-      56: '0x65F08aeF277dD40154f75fc2A0cAe0933eB2F166',
+      137: '0x65F08aeF277dD40154f75fc2A0cAe0933eB2F166',
     },
     tokenAddresses: {
-      56: [tokenMap.ALPHA, tokenMap.BNB],
+      137: [tokenMap.ALPHA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Alpha Apple Pie',
@@ -852,10 +851,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 37,
     lpAddresses: {
-      56: '0xa980C3B5D290c6C7050Dc54f4cc4dB00Aa6Ab982',
+      137: '0xa980C3B5D290c6C7050Dc54f4cc4dB00Aa6Ab982',
     },
     tokenAddresses: {
-      56: [tokenMap.SXP, tokenMap.BNB],
+      137: [tokenMap.SXP, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'SXP Suan La Tang',
@@ -867,10 +866,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 38,
     lpAddresses: {
-      56: '0x2058d400f043Da17e622011492ca5C1aEdBa6Ffc',
+      137: '0x2058d400f043Da17e622011492ca5C1aEdBa6Ffc',
     },
     tokenAddresses: {
-      56: [tokenMap.vBTC, tokenMap.BNB],
+      137: [tokenMap.vBTC, tokenMap.BNB],
     },
     tokenDecimals: 8,
     name: 'vBTC Tea',
@@ -882,10 +881,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 39,
     lpAddresses: {
-      56: '0x33B9B74F6031D9117d77AfA5977490741F3dC546',
+      137: '0x33B9B74F6031D9117d77AfA5977490741F3dC546',
     },
     tokenAddresses: {
-      56: [tokenMap.ANKR, tokenMap.BNB],
+      137: [tokenMap.ANKR, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Ankr Almond Soo Guy',
@@ -897,10 +896,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 40,
     lpAddresses: {
-      56: '0x77ebF4CFaAd95214cF54E24D6E599a2f46E7CEC8',
+      137: '0x77ebF4CFaAd95214cF54E24D6E599a2f46E7CEC8',
     },
     tokenAddresses: {
-      56: [tokenMap.TWT, tokenMap.BNB],
+      137: [tokenMap.TWT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Trust Wallet Turtle Soup',
@@ -912,10 +911,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 41,
     lpAddresses: {
-      56: '0x5B048F9F00D13bDF900480e12Fd017B30e32C2CE',
+      137: '0x5B048F9F00D13bDF900480e12Fd017B30e32C2CE',
     },
     tokenAddresses: {
-      56: [tokenMap.LINA, tokenMap.BNB],
+      137: [tokenMap.LINA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Linear Lime',
@@ -927,10 +926,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 42,
     lpAddresses: {
-      56: '0xF4919930F1D7Ea42Ec33421aA41D424C174Ae873',
+      137: '0xF4919930F1D7Ea42Ec33421aA41D424C174Ae873',
     },
     tokenAddresses: {
-      56: [tokenMap.PROM, tokenMap.BNB],
+      137: [tokenMap.PROM, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Prometeus Pineapple',
@@ -942,10 +941,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 43,
     lpAddresses: {
-      56: '0x163c979bae62d89A5bBC4875cCB562c0F10b9a63',
+      137: '0x163c979bae62d89A5bBC4875cCB562c0F10b9a63',
     },
     tokenAddresses: {
-      56: [tokenMap.ELF, tokenMap.BNB],
+      137: [tokenMap.ELF, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Elf Eggplant (Roasted)',
@@ -957,10 +956,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 44,
     lpAddresses: {
-      56: '0x205566d5e3F277A3373CC865E36DaD58B447b1a8',
+      137: '0x205566d5e3F277A3373CC865E36DaD58B447b1a8',
     },
     tokenAddresses: {
-      56: [tokenMap.MATH, tokenMap.BNB],
+      137: [tokenMap.MATH, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Math Mapo Tofu',
@@ -972,10 +971,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 45,
     lpAddresses: {
-      56: '0x470be64E617ad5561F379A0a24313513d6B05546',
+      137: '0x470be64E617ad5561F379A0a24313513d6B05546',
     },
     tokenAddresses: {
-      56: [tokenMap.AUTO, tokenMap.BNB],
+      137: [tokenMap.AUTO, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Auto Avocado',
@@ -987,10 +986,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 46,
     lpAddresses: {
-      56: '0xFaf88b1fd8895CE109a927011A3184510931b155',
+      137: '0xFaf88b1fd8895CE109a927011A3184510931b155',
     },
     tokenAddresses: {
-      56: [tokenMap.REEF, tokenMap.BNB],
+      137: [tokenMap.REEF, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Reef Roast Chicken',
@@ -1002,10 +1001,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 47,
     lpAddresses: {
-      56: '0xf021a3000FFde821c36d21524e54adf6568AD547',
+      137: '0xf021a3000FFde821c36d21524e54adf6568AD547',
     },
     tokenAddresses: {
-      56: [tokenMap.CREAM, tokenMap.BNB],
+      137: [tokenMap.CREAM, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Cream Cupcakes',
@@ -1017,10 +1016,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 48,
     lpAddresses: {
-      56: '0x626E3f0B56B88abFC43c55D4B0A7cb6e9B221CEb',
+      137: '0x626E3f0B56B88abFC43c55D4B0A7cb6e9B221CEb',
     },
     tokenAddresses: {
-      56: [tokenMap.vUSDC, tokenMap.BNB],
+      137: [tokenMap.vUSDC, tokenMap.BNB],
     },
     tokenDecimals: 8,
     name: 'vUSDC Crab Legs',
@@ -1032,10 +1031,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 49,
     lpAddresses: {
-      56: '0xC20Bed20438Ae1F65BC3863B46593d9311340d03',
+      137: '0xC20Bed20438Ae1F65BC3863B46593d9311340d03',
     },
     tokenAddresses: {
-      56: [tokenMap.SPARTA, tokenMap.BNB],
+      137: [tokenMap.SPARTA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Spartan Sausage',
@@ -1047,10 +1046,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 50,
     lpAddresses: {
-      56: '0x4bc50a90df02e8b0742cEfc320ee7c3626443c13',
+      137: '0x4bc50a90df02e8b0742cEfc320ee7c3626443c13',
     },
     tokenAddresses: {
-      56: [tokenMap.CTK, tokenMap.BNB],
+      137: [tokenMap.CTK, tokenMap.BNB],
     },
     tokenDecimals: 6,
     name: 'CertiK Cocktail',
@@ -1062,10 +1061,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 51,
     lpAddresses: {
-      56: '0xc345EC2878B2b96c0ddA6eA77218FD4DB7572b70',
+      137: '0xc345EC2878B2b96c0ddA6eA77218FD4DB7572b70',
     },
     tokenAddresses: {
-      56: [tokenMap.BURGER, tokenMap.BNB],
+      137: [tokenMap.BURGER, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Burger and Fries',
@@ -1077,10 +1076,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 52,
     lpAddresses: {
-      56: '0x6Da474F985640E18FA181cB4a2298D721cE9CCAF',
+      137: '0x6Da474F985640E18FA181cB4a2298D721cE9CCAF',
     },
     tokenAddresses: {
-      56: [tokenMap.vBUSD, tokenMap.BNB],
+      137: [tokenMap.vBUSD, tokenMap.BNB],
     },
     tokenDecimals: 8,
     name: 'vBUSD Udon',
@@ -1092,10 +1091,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 53,
     lpAddresses: {
-      56: '0x16934ec7Be6f6ca8189Cd1727ffD494C4f4045df',
+      137: '0x16934ec7Be6f6ca8189Cd1727ffD494C4f4045df',
     },
     tokenAddresses: {
-      56: [tokenMap.BRY, tokenMap.BNB],
+      137: [tokenMap.BRY, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Very Berry Fondue',
@@ -1107,10 +1106,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 54,
     lpAddresses: {
-      56: '0x866C5aAa21164Da0154B1eA57A85703eD7587DE1',
+      137: '0x866C5aAa21164Da0154B1eA57A85703eD7587DE1',
     },
     tokenAddresses: {
-      56: [tokenMap.STAX, tokenMap.BNB],
+      137: [tokenMap.STAX, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Stax Salad Rolls',
@@ -1122,10 +1121,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 55,
     lpAddresses: {
-      56: '0x076443CB456B1b3cF137ba97B0aadfD54b51A91c',
+      137: '0x076443CB456B1b3cF137ba97B0aadfD54b51A91c',
     },
     tokenAddresses: {
-      56: [tokenMap.vUSDT, tokenMap.BNB],
+      137: [tokenMap.vUSDT, tokenMap.BNB],
     },
     tokenDecimals: 8,
     name: 'vUSDT Chili',
@@ -1137,10 +1136,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 56,
     lpAddresses: {
-      56: '0x910c6754F7AE9ddC7327207a5D99C1F6cA13F113',
+      137: '0x910c6754F7AE9ddC7327207a5D99C1F6cA13F113',
     },
     tokenAddresses: {
-      56: [tokenMap.JulD, tokenMap.BNB],
+      137: [tokenMap.JulD, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'JulD Jifan',
@@ -1152,10 +1151,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 57,
     lpAddresses: {
-      56: '0xb99e484d6AD7d8CB2Dc6e97489A328E9D49b0bCc',
+      137: '0xb99e484d6AD7d8CB2Dc6e97489A328E9D49b0bCc',
     },
     tokenAddresses: {
-      56: [tokenMap.FOR, tokenMap.BNB],
+      137: [tokenMap.FOR, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Force Fortune Cookies',
@@ -1167,10 +1166,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 58,
     lpAddresses: {
-      56: '0x8C5B0E0e8d0DB85a3AEc2F1b8C2B8b740523f75B',
+      137: '0x8C5B0E0e8d0DB85a3AEc2F1b8C2B8b740523f75B',
     },
     tokenAddresses: {
-      56: [tokenMap.ANY, tokenMap.BNB],
+      137: [tokenMap.ANY, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Any Anchovies',
@@ -1182,10 +1181,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 59,
     lpAddresses: {
-      56: '0x1ec894788Cc06c0a3c657b33Fb38F401E2eCb972',
+      137: '0x1ec894788Cc06c0a3c657b33Fb38F401E2eCb972',
     },
     tokenAddresses: {
-      56: [tokenMap.HELMET, tokenMap.BNB],
+      137: [tokenMap.HELMET, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Helmet Hot Pot',
@@ -1197,10 +1196,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 60,
     lpAddresses: {
-      56: '0xdc622DC595b9f561E9A1C368448D2C5D63E53eab',
+      137: '0xdc622DC595b9f561E9A1C368448D2C5D63E53eab',
     },
     tokenAddresses: {
-      56: [tokenMap.BIFI, tokenMap.BNB],
+      137: [tokenMap.BIFI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Beefy Chow Fun',
@@ -1212,10 +1211,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 61,
     lpAddresses: {
-      56: '0xfA142aCBA2A39DC2a0Cc606EE4D1fAd4072B75ce',
+      137: '0xfA142aCBA2A39DC2a0Cc606EE4D1fAd4072B75ce',
     },
     tokenAddresses: {
-      56: [tokenMap.BTCST, tokenMap.BNB],
+      137: [tokenMap.BTCST, tokenMap.BNB],
     },
     tokenDecimals: 17,
     name: 'BTCST Bacon',
@@ -1227,10 +1226,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 62,
     lpAddresses: {
-      56: '0x216EE05E449349E6b873a7e7DDaFBB0c362776b7',
+      137: '0x216EE05E449349E6b873a7e7DDaFBB0c362776b7',
     },
     tokenAddresses: {
-      56: [tokenMap.BSCX, tokenMap.BNB],
+      137: [tokenMap.BSCX, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'BSCX Black Sesame Soup',
@@ -1242,10 +1241,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 63,
     lpAddresses: {
-      56: '0x1D62c3a2aF69B42F5779274cA7E4151Efb1EC3cB',
+      137: '0x1D62c3a2aF69B42F5779274cA7E4151Efb1EC3cB',
     },
     tokenAddresses: {
-      56: [tokenMap.UNFI, tokenMap.BNB],
+      137: [tokenMap.UNFI, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Unifi Fried Chicken',
@@ -1257,10 +1256,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 64,
     lpAddresses: {
-      56: '0xfdE31036f39299a6919CDea8e6D7cc58203d3779',
+      137: '0xfdE31036f39299a6919CDea8e6D7cc58203d3779',
     },
     tokenAddresses: {
-      56: [tokenMap.BUX, tokenMap.BNB],
+      137: [tokenMap.BUX, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Bux Brochette',
@@ -1272,10 +1271,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 65,
     lpAddresses: {
-      56: '0xa07db0a15d2815f409BA6c6B9EDc0FBD6Fc31cBb',
+      137: '0xa07db0a15d2815f409BA6c6B9EDc0FBD6Fc31cBb',
     },
     tokenAddresses: {
-      56: [tokenMap.MDS, tokenMap.BNB],
+      137: [tokenMap.MDS, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Midas Matcha Tea',
@@ -1287,10 +1286,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 66,
     lpAddresses: {
-      56: '0x9fe458505bc0236998eCEd9857356B89E78993e3',
+      137: '0x9fe458505bc0236998eCEd9857356B89E78993e3',
     },
     tokenAddresses: {
-      56: [tokenMap.HGET, tokenMap.BNB],
+      137: [tokenMap.HGET, tokenMap.BNB],
     },
     tokenDecimals: 6,
     name: 'Hedget Herbal Tea',
@@ -1302,10 +1301,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 67,
     lpAddresses: {
-      56: '0x8DA93dDB14e0AeDd116a75bECaf1723703261c2a',
+      137: '0x8DA93dDB14e0AeDd116a75bECaf1723703261c2a',
     },
     tokenAddresses: {
-      56: [tokenMap.BAO, tokenMap.BNB],
+      137: [tokenMap.BAO, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Bao Party',
@@ -1317,10 +1316,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 68,
     lpAddresses: {
-      56: '0x4e0dF48A98828b0A67458FD8Ac1575D95bFa4b2a',
+      137: '0x4e0dF48A98828b0A67458FD8Ac1575D95bFa4b2a',
     },
     tokenAddresses: {
-      56: [tokenMap.FRONT, tokenMap.BNB],
+      137: [tokenMap.FRONT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Front Frog Legs',
@@ -1332,10 +1331,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 69,
     lpAddresses: {
-      56: '0x81900Af6F65E10CBa8F1301f018b6730daa6A345',
+      137: '0x81900Af6F65E10CBa8F1301f018b6730daa6A345',
     },
     tokenAddresses: {
-      56: [tokenMap.MIR, tokenMap.BNB],
+      137: [tokenMap.MIR, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Mirror Miantiao',
@@ -1347,10 +1346,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 70,
     lpAddresses: {
-      56: '0x6eDC6C69a18d5446f96F13cA3B68eb2BDECAd2Ad',
+      137: '0x6eDC6C69a18d5446f96F13cA3B68eb2BDECAd2Ad',
     },
     tokenAddresses: {
-      56: [tokenMap.ZEE, tokenMap.BNB],
+      137: [tokenMap.ZEE, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Zee Zucchini',
@@ -1362,10 +1361,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 71,
     lpAddresses: {
-      56: '0xb4dc9B104aa0504A148c39529974eF7A13413B80',
+      137: '0xb4dc9B104aa0504A148c39529974eF7A13413B80',
     },
     tokenAddresses: {
-      56: [tokenMap.MATTER, tokenMap.BNB],
+      137: [tokenMap.MATTER, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Matter Mystery Stew',
@@ -1377,10 +1376,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 72,
     lpAddresses: {
-      56: '0x2A9fD86A68bcF5d056a8Fee2106D922924CE92E6',
+      137: '0x2A9fD86A68bcF5d056a8Fee2106D922924CE92E6',
     },
     tokenAddresses: {
-      56: [tokenMap.BLK, tokenMap.BNB],
+      137: [tokenMap.BLK, tokenMap.BNB],
     },
     tokenDecimals: 6,
     name: 'BLink Brownie',
@@ -1392,10 +1391,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 73,
     lpAddresses: {
-      56: '0xdb8aD7E2a5B19D7449a2d6BF231467a62141734f',
+      137: '0xdb8aD7E2a5B19D7449a2d6BF231467a62141734f',
     },
     tokenAddresses: {
-      56: [tokenMap.POLS, tokenMap.BNB],
+      137: [tokenMap.POLS, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Polkastarter Pot Stickers',
@@ -1407,10 +1406,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 74,
     lpAddresses: {
-      56: '0x30B284AF8D0e1D07cEbe6dF95BF3d904B52a49B3',
+      137: '0x30B284AF8D0e1D07cEbe6dF95BF3d904B52a49B3',
     },
     tokenAddresses: {
-      56: [tokenMap.TLM, tokenMap.BNB],
+      137: [tokenMap.TLM, tokenMap.BNB],
     },
     tokenDecimals: 4,
     name: 'Alien Worlds Octopus',
@@ -1422,10 +1421,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 75,
     lpAddresses: {
-      56: '0xD661f50A548D90746644179401C2D2043D55728D',
+      137: '0xD661f50A548D90746644179401C2D2043D55728D',
     },
     tokenAddresses: {
-      56: [tokenMap.UBXT, tokenMap.BNB],
+      137: [tokenMap.UBXT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'UpBots Bento Box',
@@ -1437,10 +1436,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 76,
     lpAddresses: {
-      56: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',
+      137: '0x0eD7e52944161450477ee417DE9Cd3a859b14fD0',
     },
     tokenAddresses: {
-      56: [tokenMap.CAKE, tokenMap.BNB],
+      137: [tokenMap.CAKE, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Pancakes and Syrup',
@@ -1453,10 +1452,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 77,
     lpAddresses: {
-      56: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16',
+      137: '0x58F876857a02D6762E0101bb5C46A8c1ED44Dc16',
     },
     tokenAddresses: {
-      56: [tokenMap.BUSD, tokenMap.BNB],
+      137: [tokenMap.BUSD, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'BUSD BLT',
@@ -1469,10 +1468,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 78,
     lpAddresses: {
-      56: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc',
+      137: '0x74E4716E431f45807DCF19f284c7aA99F18a4fbc',
     },
     tokenAddresses: {
-      56: [tokenMap.ETH, tokenMap.BNB],
+      137: [tokenMap.ETH, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'ETH-BNB',
@@ -1485,10 +1484,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 79,
     lpAddresses: {
-      56: '0x61EB789d75A95CAa3fF50ed7E47b96c132fEc082',
+      137: '0x61EB789d75A95CAa3fF50ed7E47b96c132fEc082',
     },
     tokenAddresses: {
-      56: [tokenMap.BTCB, tokenMap.BNB],
+      137: [tokenMap.BTCB, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'BTCB Bubble Tea',
@@ -1501,10 +1500,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 80,
     lpAddresses: {
-      56: '0x7EFaEf62fDdCCa950418312c6C91Aef321375A00',
+      137: '0x7EFaEf62fDdCCa950418312c6C91Aef321375A00',
     },
     tokenAddresses: {
-      56: [tokenMap.BUSDT, tokenMap.BUSD],
+      137: [tokenMap.BUSDT, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'USDT-BUSD',
@@ -1517,10 +1516,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 81,
     lpAddresses: {
-      56: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE',
+      137: '0x16b9a82891338f9bA80E2D6970FddA79D1eb0daE',
     },
     tokenAddresses: {
-      56: [tokenMap.BUSDT, tokenMap.BNB],
+      137: [tokenMap.BUSDT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'USDT Tofu',
@@ -1533,10 +1532,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 82,
     lpAddresses: {
-      56: '0x5aFEf8567414F29f0f927A0F2787b188624c10E2',
+      137: '0x5aFEf8567414F29f0f927A0F2787b188624c10E2',
     },
     tokenAddresses: {
-      56: [tokenMap.BNB, tokenMap.BUNNY],
+      137: [tokenMap.BNB, tokenMap.BUNNY],
     },
     tokenDecimals: 18,
     name: 'Bunny Bacon',
@@ -1549,10 +1548,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 83,
     lpAddresses: {
-      56: '0xDd5bAd8f8b360d76d12FdA230F8BAF42fe0022CF',
+      137: '0xDd5bAd8f8b360d76d12FdA230F8BAF42fe0022CF',
     },
     tokenAddresses: {
-      56: [tokenMap.DOT, tokenMap.BNB],
+      137: [tokenMap.DOT, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Polka Poke',
@@ -1565,10 +1564,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 84,
     lpAddresses: {
-      56: '0x2354ef4DF11afacb85a5C7f98B624072ECcddbB1',
+      137: '0x2354ef4DF11afacb85a5C7f98B624072ECcddbB1',
     },
     tokenAddresses: {
-      56: [tokenMap.USDC, tokenMap.BUSD],
+      137: [tokenMap.USDC, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'USDC Crunch',
@@ -1581,10 +1580,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 85,
     lpAddresses: {
-      56: '0x133ee93FE93320e1182923E1a640912eDE17C90C',
+      137: '0x133ee93FE93320e1182923E1a640912eDE17C90C',
     },
     tokenAddresses: {
-      56: [tokenMap.VAI, tokenMap.BUSD],
+      137: [tokenMap.VAI, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'Vai Pie',
@@ -1597,10 +1596,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 86,
     lpAddresses: {
-      56: '0x824eb9faDFb377394430d2744fa7C42916DE3eCe',
+      137: '0x824eb9faDFb377394430d2744fa7C42916DE3eCe',
     },
     tokenAddresses: {
-      56: [tokenMap.LINK, tokenMap.BNB],
+      137: [tokenMap.LINK, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Link Lunch',
@@ -1613,10 +1612,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 87,
     lpAddresses: {
-      56: '0x66FDB2eCCfB58cF098eaa419e5EfDe841368e489',
+      137: '0x66FDB2eCCfB58cF098eaa419e5EfDe841368e489',
     },
     tokenAddresses: {
-      56: [tokenMap.DAI, tokenMap.BUSD],
+      137: [tokenMap.DAI, tokenMap.BUSD],
     },
     tokenDecimals: 18,
     name: 'Dai Pie (Italian)',
@@ -1629,10 +1628,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 88,
     lpAddresses: {
-      56: '0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86',
+      137: '0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86',
     },
     tokenAddresses: {
-      56: [tokenMap.XRP, tokenMap.BNB],
+      137: [tokenMap.XRP, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Ripple Rice Bowl',
@@ -1645,10 +1644,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 89,
     lpAddresses: {
-      56: '0x28415ff2C35b65B9E5c7de82126b4015ab9d031F',
+      137: '0x28415ff2C35b65B9E5c7de82126b4015ab9d031F',
     },
     tokenAddresses: {
-      56: [tokenMap.ADA, tokenMap.BNB],
+      137: [tokenMap.ADA, tokenMap.BNB],
     },
     tokenDecimals: 18,
     name: 'Cardano Caviar',
@@ -1661,10 +1660,10 @@ export const supportedPools: SupportedPool[] = [
   {
     pid: 90,
     lpAddresses: {
-      56: '0x014608E87AF97a054C9a49f81E1473076D51d9a3',
+      137: '0x014608E87AF97a054C9a49f81E1473076D51d9a3',
     },
     tokenAddresses: {
-      56: [tokenMap.BNB, tokenMap.UNI],
+      137: [tokenMap.BNB, tokenMap.UNI],
     },
     tokenDecimals: 18,
     name: 'Uni Unagi',
@@ -1681,15 +1680,15 @@ export interface FarmablePool {
   address: string
   lpAddresses:
     | {
-        56: string
+        137: string
         1?: undefined
       }
     | {
         1: string
-        56: string
+        137: string
       }
     | {
-        56: string
+        137: string
         1?: undefined
       }
   tokenAddresses: DescribesToken[]
@@ -1713,7 +1712,7 @@ export function useAllFarmablePools(chainId: ChainId.XDAI = ChainId.XDAI): Farma
           return []
         }
         const isSushi = poolInfo.poolType === PoolType.CAKE
-        const tokenAddresses = poolInfo.tokenAddresses[56] // TODO: need token addresses for mainnet?
+        const tokenAddresses = poolInfo.tokenAddresses[137] // TODO: need token addresses for mainnet?
         if (!tokenAddresses) {
           return []
         }

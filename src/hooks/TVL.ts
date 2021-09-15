@@ -21,24 +21,24 @@ const ten = JSBI.BigInt(10)
 
 export const useBaoUsdPrice = (): Fraction | undefined => {
   // PNDA-BNB
-  const XDAI = WETH[56]
+  const XDAI = WETH[137]
   const [, pair1] = usePair(PNDA, XDAI)
-  const xDaiUsdOracleAddress = useMemo(() => priceOracles[56][XDAI.address], [XDAI.address])
+  const xDaiUsdOracleAddress = useMemo(() => priceOracles[137][XDAI.address], [XDAI.address])
 
   // PNDA-USDC
   const [, pair2] = usePair(PNDA, USDC)
-  const wethUsdOracleAddress = useMemo(() => priceOracles[56][USDC.address], [])
+  const wethUsdOracleAddress = useMemo(() => priceOracles[137][USDC.address], [])
 
   // PNDA-BUSD
   const [, pair3] = usePair(PNDA, BUSD)
-  const busdUsdOracleAddress = useMemo(() => priceOracles[56][BUSD.address], [])
+  const busdUsdOracleAddress = useMemo(() => priceOracles[137][BUSD.address], [])
 
   // PNDA-DAI
   const [, pair4] = usePair(PNDA, DAI)
-  const daiUsdOracleAddress = useMemo(() => priceOracles[56][DAI.address], [])
+  const daiUsdOracleAddress = useMemo(() => priceOracles[137][DAI.address], [])
 
   const [, pair5] = usePair(PNDA, ETH)
-  const ethUsdOracleAddress = useMemo(() => priceOracles[56][ETH.address], [])
+  const ethUsdOracleAddress = useMemo(() => priceOracles[137][ETH.address], [])
 
   const allPriceOracles = [
     xDaiUsdOracleAddress,
@@ -95,7 +95,7 @@ export interface PriceOracleDescriptor {
 
 export function useAllPriceOracleDescriptors(farmablePools: FarmablePool[]): PriceOracleDescriptor[] {
   const { chainId } = useActiveWeb3React()
-  const chainIdNumber = useMemo(() => (chainId === ChainId.XDAI ? 56 : undefined), [chainId])
+  const chainIdNumber = useMemo(() => (chainId === ChainId.XDAI ? 137 : undefined), [chainId])
 
   const tokenDesciptorPairs = useMemo(() => farmablePools.map((f) => f.tokenAddresses), [farmablePools])
   const priceOraclesForChain = useMemo(() => chainIdNumber && priceOracles[chainIdNumber], [chainIdNumber])
@@ -271,7 +271,7 @@ export function useStakedTVL(
   const { chainId } = useActiveWeb3React()
 
   const [tokenDescriptor0, tokenDescriptor1] = farmablePool.tokenAddresses
-  const chainIdNumber = useMemo(() => (chainId === ChainId.XDAI ? 56 : undefined), [chainId])
+  const chainIdNumber = useMemo(() => (chainId === ChainId.XDAI ? 137 : undefined), [chainId])
   const token0 = useMemo(
     () => chainId && new Token(chainId, tokenDescriptor0.address, tokenDescriptor0.decimals, tokenDescriptor0.symbol),
     [chainId, tokenDescriptor0]

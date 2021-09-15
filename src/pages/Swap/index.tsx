@@ -56,7 +56,7 @@ export default function Swap() {
 	const urlLoadedTokens: Token[] = useMemo(
 		() =>
 			[loadedInputCurrency, loadedOutputCurrency]?.filter(
-				(c): c is Token => c instanceof Token && !SUGGESTED_BASES[56].map((t) => t.address).includes(c.address)
+				(c): c is Token => c instanceof Token && !SUGGESTED_BASES[137].map((t) => t.address).includes(c.address)
 			) ?? [],
 		[loadedInputCurrency, loadedOutputCurrency]
 	)
