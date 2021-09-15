@@ -67,6 +67,7 @@ export function useTokenContract(tokenAddress?: string, withSignerIfPossible?: b
 // native wrapped chain currency
 export function useWETHContract(withSignerIfPossible?: boolean): Contract | null {
   const { chainId } = useActiveWeb3React()
+  console.log(WETH);
   return useContract(chainId ? WETH[chainId].address : undefined, WETH_ABI, withSignerIfPossible)
 }
 
