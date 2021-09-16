@@ -1,9 +1,8 @@
 import { useMemo } from 'react'
 import { ChainId, Token } from 'uniswap-bsc-sdk'
 export const contractAddresses = {
-  bao: {
-    137: '0x47DcC83a14aD53Ed1f13d3CaE8AA4115f07557C0',
-  },
+  /*
+
   bamboo: {
     137: '0xEF88e0d265dDC8f5E725a4fDa1871F9FE21B11E2',
   },
@@ -13,9 +12,14 @@ export const contractAddresses = {
   rhino: {
     137: '0xD2ECa3cff5F09Cfc9C425167d12F0a005Fc97c8c',
   },
-  masterChef: {
-    137: '0x9942cb4c6180820E6211183ab29831641F58577A',
+  */
+  bao: {
+    137: '0x4C392822D4bE8494B798cEA17B43d48B2308109C',
   },
+  masterChef: {
+    137: '0x850161bF73944a8359Bd995976a34Bb9fe30d398',
+  },
+  /*
   wbnb: {
     137: '0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c',
   },
@@ -28,6 +32,7 @@ export const contractAddresses = {
   pndaPrice: {
     137: '',
   },
+  */
 }
 
 export const addressMap = {
@@ -129,7 +134,9 @@ class TokenDescriptor implements DescribesToken {
 
 const tokenMap = {
   NULL: new TokenDescriptor('0x0000000000000000000000000000000000000000', 'Missing', 18),
-  BNB: new TokenDescriptor('0xbb4CdB9CBd36B01bD1cBaEBF2De08d9173bc095c', 'BNB', 18),
+  RAI: new TokenDescriptor('0x00e5646f60ac6fb446f621d146b6e1886f002905', 'RAI', 18),
+  NDEFI: new TokenDescriptor('0xd3f07ea86ddf7baebefd49731d7bbd207fedc53b', 'nDEFI', 18),
+  /*
   PNDA: new TokenDescriptor('0x47DcC83a14aD53Ed1f13d3CaE8AA4115f07557C0', 'PNDA', 18),
   BUSD: new TokenDescriptor('0xe9e7cea3dedca5984780bafc599bd69add087d56', 'BUSD', 18),
   ETH: new TokenDescriptor('0x2170ed0880ac9a755fd29b2688956bd959f933f8', 'ETH', 18),
@@ -204,6 +211,7 @@ const tokenMap = {
   BAMBOO: new TokenDescriptor('0xEF88e0d265dDC8f5E725a4fDa1871F9FE21B11E2', '', 18),
   RHINO: new TokenDescriptor('0xD2ECa3cff5F09Cfc9C425167d12F0a005Fc97c8c', '', 9),
   BUSDT: new TokenDescriptor('0x55d398326f99059ff775485246999027b3197955', 'BUSD-T', 18),
+  */
 }
 
 // non-address looksups can be used to fetchPrice
@@ -247,6 +255,23 @@ export interface SupportedPool {
 }
 
 export const supportedPools: SupportedPool[] = [
+  {
+    pid: 88,
+    lpAddresses: {
+      137: '0xd0fa2eaa5d854f184394e93f7b75624084600685',
+    },
+    tokenAddresses: {
+      137: [tokenMap.RAI, tokenMap.NDEFI],
+    },
+    tokenDecimals: 18,
+    name: 'Rai nDefi',
+    symbol: 'RAI-nDEFI',
+    tokenSymbol: 'RAI',
+    poolType: PoolType.CAKE,
+    icon: '/rice-bowl.png',
+    refUrl: 'https://pandaswap.xyz/#/swap?outputCurrency=0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe',
+  },
+  /*
   {
     pid: 3,
     lpAddresses: {
@@ -1626,22 +1651,6 @@ export const supportedPools: SupportedPool[] = [
     refUrl: 'https://pandaswap.xyz/#/swap?outputCurrency=0x1af3f329e8be154074d8769d1ffa4ee058b1dbc3',
   },
   {
-    pid: 88,
-    lpAddresses: {
-      137: '0x03F18135c44C64ebFdCBad8297fe5bDafdBbdd86',
-    },
-    tokenAddresses: {
-      137: [tokenMap.XRP, tokenMap.BNB],
-    },
-    tokenDecimals: 18,
-    name: 'Ripple Rice Bowl',
-    symbol: 'XRP-BNB CAKELP',
-    tokenSymbol: 'XRP',
-    poolType: PoolType.CAKE,
-    icon: '/rice-bowl.png',
-    refUrl: 'https://pandaswap.xyz/#/swap?outputCurrency=0x1d2f0da169ceb9fc7b3144628db156f3f6c60dbe',
-  },
-  {
     pid: 89,
     lpAddresses: {
       137: '0x28415ff2C35b65B9E5c7de82126b4015ab9d031F',
@@ -1673,6 +1682,7 @@ export const supportedPools: SupportedPool[] = [
     icon: '/unagi.png',
     refUrl: 'https://pandaswap.xyz/#/swap?outputCurrency=0xbf5140a22578168fd562dccf235e5d43a02ce9b1',
   },
+  */
 ]
 
 export interface FarmablePool {

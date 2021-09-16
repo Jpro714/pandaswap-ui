@@ -173,7 +173,7 @@ export function useAllStakedTVL(
     CHAINLINK_PRICE_ORACLE_INTERFACE,
     'decimals'
   )
-
+  console.log("about to calc staked amounts");
   const stakedAmounts = useAllStakedAmounts(tokens)
 
   const ratiosStaked = useMemo(() => {

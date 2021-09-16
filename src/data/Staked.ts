@@ -23,10 +23,19 @@ export function useTotalLiquidityAmount(token?: Token, contract?: Contract): Tok
 }
 
 export function useStakedAmount(token: Token | undefined): TokenAmount | undefined {
-  const masterChefContract = useMasterChefContract()
-  const contract = useLPContract(token?.address) || null
-  const balance = useSingleCallResult(contract, 'balanceOf', [masterChefContract?.address]).result?.[0]
+  console.log("about to calc useStakedAmount for: ");
+  console.log(token);
 
+  const masterChefContract = useMasterChefContract()
+  console.log("masterChefContract: ");
+  console.log(masterChefContract);
+  const contract = useLPContract(token?.address) || null
+  console.log("contract: ");
+  console.log(contract);
+
+  const balance = useSingleCallResult(contract, 'balanceOf', [masterChefContract?.address]).result?.[0]
+  console.log("balance: ");
+  console.log(balance);
   return useMemo(() => (contract && token && balance ? new TokenAmount(token, balance?.toString()) : undefined), [
     token,
     balance,
@@ -37,13 +46,20 @@ export function useStakedAmount(token: Token | undefined): TokenAmount | undefin
 const ERC20_INTERFACE = new Interface(ERC20_ABI)
 export function useAllStakedAmounts(tokens: Token[] | undefined): (TokenAmount | undefined)[] {
   const masterChefContract = useMasterChefContract()
+  console.log(masterChefContract);
   const tokenAddresses = useMemo(() => tokens?.map((t) => t?.address), [tokens])
+  console.log("tokenAddresses: ");
+  console.log(tokenAddresses);
   // const contracts = useLPContracts(tokenAddresses ?? []) || null
   const balanceResults = useMultipleContractSingleData(tokenAddresses ?? [], ERC20_INTERFACE, 'balanceOf', [
     masterChefContract?.address,
   ])
-
+  console.log("useAllStakedAmounts balance results: ");
+  console.log(balanceResults);
+  console.log("tokens: ");
+  console.log(tokens);
   return useMemo(() => {
+    console.log("about to map balanceResults");
     return balanceResults?.map((balanceResult, i) => {
       const token = tokens && tokens[i]
       const balance = balanceResult.result?.[0]

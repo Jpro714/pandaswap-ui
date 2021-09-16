@@ -32,6 +32,7 @@ import Logo from '../../components/Logo'
 import { Fraction } from 'uniswap-bsc-sdk'
 
 export default function Analytics() {
+	console.log("starting analytics");
 	const { t } = useTranslation()
 	const theme = useContext(ThemeContext)
 	const { active } = useActiveWeb3React()

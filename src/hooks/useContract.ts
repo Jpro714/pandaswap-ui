@@ -6,7 +6,7 @@ import ENS_ABI from '../constants/abis/ens-registrar.json'
 import ENS_PUBLIC_RESOLVER_ABI from '../constants/abis/ens-public-resolver.json'
 import { ERC20_BYTES32_ABI } from '../constants/abis/erc20'
 import ERC20_ABI from '../constants/abis/erc20.json'
-import MASTERFARMER_ABI from '../constants/abis/masterfarmer.json'
+import MASTERFARMER_ABI from '../constants/abis/pollyMasterFarmer.json'
 import BAO from '../constants/abis/bao.json'
 import UNIV2LP from '../constants/abis/uni_v2_lp.json'
 import UNISOCKS_ABI from '../constants/abis/unisocks.json'
@@ -23,12 +23,23 @@ export const UNIV2_INTERFACE = new Interface(UNIV2LP)
 
 // returns null on errors
 export function useContract(address: string | undefined, ABI: any, withSignerIfPossible = true): Contract | null {
+  console.log("hi from useContract");
   const activeWeb3React = useActiveWeb3React()
+  console.log("activeWeb3React: ");
+  console.log(activeWeb3React);
   const usingWeb3React = activeWeb3React
   const { library, account } = usingWeb3React
-
+  console.log("library: ");
+  console.log(library);
+  console.log("account: ");
+  console.log(account);
+  console.log("address: " + address);
+  console.log("ABI: ");
+  console.log(ABI);
   return useMemo(() => {
+    console.log("before");
     if (!address || !ABI || !library) return null
+    console.log("after")
     try {
       return getContract(address, ABI, library, withSignerIfPossible && account ? account : undefined)
     } catch (error) {
@@ -80,8 +91,9 @@ export function useLPContracts(addresses: string[], withSignerIfPossible?: boole
 }
 
 export function useMasterChefContract(withSignerIfPossible?: boolean): Contract | null {
+  console.log("hi from useMasterChefContract");
   const { chainId } = useActiveWeb3React()
-
+  console.log("useMasterChefContract chainId: " + chainId);
   return useContract(
     chainId === ChainId.XDAI ? contractAddresses.masterChef[ChainId.XDAI] : undefined,
     MASTERFARMER_ABI,

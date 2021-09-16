@@ -56,7 +56,8 @@ export default function Farm() {
 	const toggleWalletModal = useWalletModalToggle()
 
 	const allFarmablePools = useAllFarmablePools()
-
+	console.log("all farmable polls: ");
+	console.log(allFarmablePools);
 	const liquidityTokens = useMemo(() => allFarmablePools.map((farm) => farm.token), [allFarmablePools])
 
 	const [tokenBalanceMap, fetchingV2PairBalances] = useTokenBalancesWithLoadingIndicator(
@@ -181,7 +182,7 @@ export default function Farm() {
 						<RowBetween>
 							<RowBetween>
 								<Text fontSize={16} fontWeight={500}>
-									PNDA:
+									PanDuh:
 								</Text>
 							</RowBetween>
 							<b>${baoPriceUsd ? baoPriceUsd.toSignificant(5, {}) : '-'}</b>

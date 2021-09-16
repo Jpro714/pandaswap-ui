@@ -99,7 +99,8 @@ function useCallsData(
       )
     }
   }, [chainId, dispatch, options, serializedCallKeys])
-
+  console.log("useCallsData: ");
+  console.log([callResults, calls, chainId]);
   return useMemo(
     () =>
       calls.map<CallResult>((call) => {
@@ -214,6 +215,7 @@ export function useMultipleContractSingleData(
 ): CallState[] {
   const web3 = overrideWeb3 ?? useActiveWeb3React()
   const chainId = web3.chainId
+  console.log("useMultipleContractSingleData chainId: " + chainId);
   const fragment = useMemo(() => contractInterface.getFunction(methodName), [contractInterface, methodName])
   const callData: string | undefined = useMemo(
     () =>
@@ -223,6 +225,8 @@ export function useMultipleContractSingleData(
     [callInputs, contractInterface, fragment]
   )
 
+  console.log("useMultipleContractSingleData data: ");
+  console.log([addresses, callData, chainId, fragment]);
   const calls = useMemo(
     () =>
       fragment && addresses && addresses.length > 0 && callData
@@ -240,7 +244,8 @@ export function useMultipleContractSingleData(
   )
 
   const results = useCallsData(calls, options, chainId)
-
+  console.log("useMultipleContractSingleData results: ");
+  console.log(results);
   const latestBlockNumber = useBlockNumber(chainId)
 
   return useMemo(() => {
